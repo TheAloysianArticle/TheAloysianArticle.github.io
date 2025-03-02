@@ -1,5 +1,6 @@
+import config from "./config.js";
 const { createClient } = supabase;
-const _supabase = createClient('https://rivaadrywxieeuqkyjjk.supabase.co', process.env.SUPABASE_KEY);
+const _supabase = createClient('https://rivaadrywxieeuqkyjjk.supabase.co', config.SUPABASE_KEY);
 
 async function fetchKeys() {
     const { data, error } = await _supabase.from('Keys').select();
