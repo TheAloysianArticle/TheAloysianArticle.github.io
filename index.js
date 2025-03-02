@@ -1,4 +1,4 @@
-import config from "./config.js";
+import * as config from "./config.js";
 const { createClient } = supabase;
 const _supabase = createClient('https://rivaadrywxieeuqkyjjk.supabase.co', config.SUPABASE_KEY);
 
