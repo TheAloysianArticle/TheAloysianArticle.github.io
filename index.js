@@ -1,4 +1,4 @@
-// import { createClient } from '../node_modules/@supabase/supabase-js/src/index.ts'
+import supabase from 'https://unpkg.com/@supabase/supabase-js@2'
 const supabased = createClient('https://rivaadrywxieeuqkyjjk.supabase.co', process.env.SUPABASE_KEY);
 
 async function fetchKeys() {
