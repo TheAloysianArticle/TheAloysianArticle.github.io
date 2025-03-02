@@ -1,8 +1,8 @@
-import { object } from 'https://unpkg.com/@supabase/supabase-js@2'
-const supabased = createClient('https://rivaadrywxieeuqkyjjk.supabase.co', process.env.SUPABASE_KEY);
+const { createClient } = supabase;
+const _supabase = createClient('https://rivaadrywxieeuqkyjjk.supabase.co', process.env.SUPABASE_KEY);
 
 async function fetchKeys() {
-    const { data, error } = await supabased.from('Keys').select();
+    const { data, error } = await _supabase.from('Keys').select();
     if (error) {
         console.log(error)
     }
